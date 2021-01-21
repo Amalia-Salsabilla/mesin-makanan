@@ -1,16 +1,16 @@
 <?php
 class food{
-	$food;
-	$foodprice = 0;
+	public $food;
+	public $foodprice = 0;
 
-	$lighttopping = array();
-	$mediumtopping = array();
+	public $lighttopping = array();
+	public $mediumtopping = array();
 
-	$totallighttopping = 0;
-	$totalmediumtopping = 0;
+	public $totallighttopping = 0;
+	public $totalmediumtopping = 0;
 
-	$costlighttopping = 0;
-	$costmediumtopping = 0;
+	public $costlighttopping = 0;
+	public $costmediumtopping = 0;
 
 	// method untuk menentukan jenis makanan
 	function setFood($new_food){
