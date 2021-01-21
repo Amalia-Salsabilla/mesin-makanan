@@ -1,16 +1,16 @@
 <?php
 class food{
-	var $food;
-	var $foodprice = 0;
+	$food;
+	$foodprice = 0;
 
-	var $lighttopping = array();
-	var $mediumtopping = array();
+	$lighttopping = array();
+	$mediumtopping = array();
 
-	var $totallighttopping = 0;
-	var $totalmediumtopping = 0;
+	$totallighttopping = 0;
+	$totalmediumtopping = 0;
 
-	var $costlighttopping = 0;
-	var $costmediumtopping = 0;
+	$costlighttopping = 0;
+	$costmediumtopping = 0;
 
 	// method untuk menentukan jenis makanan
 	function setFood($new_food){
@@ -29,6 +29,7 @@ class food{
 		return $this->food;
 	}
 
+// aturan 1
 	// method untuk menentukan topping ringan
 	function addLightTopping($light, $total){
 		if($light == 1){
@@ -50,6 +51,7 @@ class food{
 		$this->totallighttopping += $total;
 	}
 
+// aturan 2
 	// method untuk menentukan topping sedang\
 	function addMediumTopping($medium, $total){
 		if($medium == 1){
@@ -71,10 +73,12 @@ class food{
 		$totalDiscount = 0;
 		$grandTotal = 0;
 
+// aturan 3
 		if($this->food == "Nasi Campur" && count ($this->lighttopping) > 0 && count($this->mediumtopping) > 0){
 			$disc = 2;
 			$totalDiscount = $subTotal * 2/100;
 			$grandTotal = $subTotal - $totalDiscount;
+// aturan 4
 		}elseif ($this->food == "Soto" || $this->food == "Rawon"){
 			if($this->totallighttopping == 3 && $this->totalmediumtopping == 4){
 				$disc = 3;
